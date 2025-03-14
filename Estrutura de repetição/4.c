@@ -1,29 +1,27 @@
-// A conversão de graus Fahrenheit para Celsius é obtida por Tc = (Tf-32) * 5/9, em que Tc
-// é a temperatura em graus Celsius e Tf em Fahrenheit. Faça um programa C que calcule
-// e que imprima uma tabela de graus Fahrenheit e graus Celsius, cujos graus variem de
-// 50 a 65, de 1 em 1
+// Faça um programa que leia um número inteiro positivo n e imprima n linhas com o 
+// seguinte formato (exemplo para n = 6):
+//                                       
+//                           1           
+//                            2          
+//                             3         
+//                              4        
+//                               5       
+//                                6      
+
+
 
 #include <stdio.h>
 
-int main() {
-    float Tc;
-    int Tf = 50;
+int main()
+{
+    int i, numLinhas;
 
-    printf("Tabela de Conversão de Fahrenheit para Celsius:\n");
-    printf("___________________________\n");
-    printf("| Fahrenheit |   Celsius  |\n");
-    printf("|____________|____________|\n");
-    
-    while (Tf <= 65) {
-        Tc = (Tf - 32) * 5.0 / 9.0;
-        printf("|    %3d     |   %6.2f   |\n", Tf, Tc);
-        Tf++;
+    printf("Digite um numero inteiro de linhas: ");
+    scanf("%d", &numLinhas);
+
+    for(i = 1; i <= numLinhas; i++){
+        printf("%*d\n", i + 1, i);
     }
-    
-    printf("|____________|____________|\n");
-    
+
     return 0;
 }
-
-
-

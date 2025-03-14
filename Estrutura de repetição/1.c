@@ -1,25 +1,16 @@
-// Dada uma sequência de números inteiros diferente de zero, terminada por um zero,
-// imprima o quadrado de cada número da sequência
-
+// Escreva um programa que calcule e exiba a soma dos quadrados dos 100 primeiros 
+// números inteiros
 
 #include <stdio.h>
 
+int main(){
+    int i, soma = 0;
 
-int main()
-{
-	int numero, quadrado;
+    for(i = 0; i <= 100; i++){
+        soma += i * i;
+    }
 
-	do
-	{
-		printf("Digite um numero (0 para sair): ");
-		scanf("%d", &numero);
+    printf("A soma dos quadrados dos três primeiros numeros inteiros é: %d\n", soma);
 
-		quadrado = numero * numero;
-
-		printf("O quadrado de %d é: %d\n", numero, quadrado);
-
-	} while (numero != 0);
-	
-	return 0;
+    return 0;
 }
-

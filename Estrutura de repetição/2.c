@@ -1,26 +1,21 @@
-// Sabe-se que uma determinada espécie de Bactéria divide-se a cada segundo. Faça
-// um programa em C que calcule o número de bactérias obtidas em n segundos. O
-// número de segundos deve ser passado pelo usuário
+/// Dado um número, crie um programa que escreva todos os números ímpares menores 
+// e/ou iguais a esse número e maiores ou igual a 1.
+// Considere que o número informado é positivo
 
 #include <stdio.h>
 
 int main()
 {
-    unsigned long long bacterias;
-    int segundos, ac;
+    int i, num;
 
-    ac = 0;
-    bacterias = 1;
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
 
-    printf("Digite o tempo em segundos: ");
-    scanf("%d", &segundos);
-
-    while(ac < segundos){
-        bacterias *= 2 ;
-        ac ++;
+    for(i = 0; i <= num; i++){
+        if(i % 2 != 0){
+            printf("%d\n", i);
+        }
     }
-    
-    printf("O número de bacterias depois de %d segundos é: %llu bacterias.\n", segundos, bacterias);
-    
+
     return 0;
 }
